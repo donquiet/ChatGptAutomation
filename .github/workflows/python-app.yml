@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3  # 최신 버전으로 업데이트
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3  # 최신 버전으로 업데이트
         with:
           python-version: '3.x'
 
@@ -25,8 +24,3 @@ jobs:
       - name: Run tests
         run: |
           if [ -f tests.py ]; then python tests.py; fi
-
-      # 새 작업 추가 예시
-      - name: Run additional script
-        run: |
-          python additional_script.py
